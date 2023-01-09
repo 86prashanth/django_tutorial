@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h2>Change password</h2>
+    <form action="" method='POST' novalidate>
+        {% csrf_token %} {% for fm in form %}
+        <div>
+            {{fm.label_tag}} {{fm}}
+            <small>{{fm.errors|striptags}}</small>
+        </div>
+        {% endfor %}
+        <input type="submit" value="submit">
+    </form>
+    {% if form.non_field_errors %} {% for error in form.non_field_errors %}
+    <p>{{error}}</p>
+    {%endfor%}{%endif%}
+</body>
+
+</html>

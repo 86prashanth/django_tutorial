@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table,tr,th,td{
+                border:2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Manytomany fields..</h3>
+      <table>
+        <thead>
+            <th>user</th>
+            <th>song_name</th>
+            <th>song_duration</th>
+        </thead>
+        <tbody>
+            <tr>
+            {% if data %}  
+            {% for song in data %}
+               <td>{{song.user}}</td>
+               <td>{{song.song_name}}</td>
+               <td>{{song.song_duration}}</td>
+            </tr>
+            {% endfor %}       
+            {% endif %}
+        </tbody>
+      </table>
+    </body>
+</html>

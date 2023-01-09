@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Post information...</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>user</th>
+                <th>post_title</th>
+                <th>post_cat</th>
+                <th>post_publish_date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% if data %} {% for post in data %}
+                <td>{{post.user}}</td>
+                <td>{{post.post_title}}</td>
+                <td>{{post.post_cat}}</td>
+                <td>{{post.post_publish_date}}</td>
+
+            </tr>
+            {% endfor %} {% endif %} </tbody>
+    </table>
+</body>
+
+</html>

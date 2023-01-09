@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detail</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <thead>
+                <th>Id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>Password</th>
+            </thead>
+        </tr>
+        <tbody>
+            <tr>
+                {% for remove in all_removes %}
+                <td>{{remove.id}}</td>
+                <td>{{remove.name}}</td>
+                <td>{{remove.email}}</td>
+                <td>{{remove.password}}</td> {% endfor %}
+            </tr><br>
+        </tbody>
+
+
+</html>

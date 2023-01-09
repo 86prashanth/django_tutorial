@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get session</title>
+</head>
+<body>
+    <h5>Get session..</h5>
+    <p>name:{{name}}</p>  <br><br>
+    <p>age:{{request.session.get_session_cookie_age}}</p>
+    <p>expiry_age:{{request.session.get_session_cookie_age}}</p>
+    <p>expiry_date:{{request.session.get_session_expiry_age}}</p>
+    <p>expiry_at_browser_close:{{request.session.get_session_cookie_age}}</p>
+</body>
+</html>

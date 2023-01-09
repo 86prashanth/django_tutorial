@@ -1,0 +1,4 @@
+<h2>List list</h2>
+{% for geeks in detail_list %} 
+<ul><li><a href="{% url 'listdetail' geeks.id %}">{{geeks.name}}</a></li></ul>
+{% endfor %}

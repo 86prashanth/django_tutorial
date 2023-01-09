@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+</head>
+<body>
+    <h4>this is home page {{ch}}</h4>
+    <a href="{% url 'dynamic' %}">Registration form</a>
+    <a href="{% url 'id' 1 %}">ID 1</a>
+    <a href="{% url 'id' 2 %}">ID 2</a>
+    <a href="{% url 'id' 3 %}">ID 3</a>
+
+    <a href="{% url 'subid' 1 5 %}">sub_ID 1</a>
+    <a href="{% url 'subid' 2 6  %}">sub_ID 2</a>
+    <a href="{% url 'subid' 3 7 %}">sub_ID 3</a> <br>
+   
+    {{msg}}
+</body>
+</html>

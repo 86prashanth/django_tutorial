@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Detail view</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>List Detail View page</h1>
+    {{geeks.id}}
+    {{geeks.name}}
+    {{geeks.roll}}
+    {{geeks.course}}<hr>
+    {% for geeks in all_details %}
+    <ul>
+        <li><a href="{% url 'listdetail' geeks.id %}">{{geeks.name}}</a></li>
+    </ul>
+    {% endfor %}
+</body>
+
+</html>

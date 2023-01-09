@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datetime </title>
+</head>
+<body>
+    <p>
+        <b>Current Date:</b>{{current_date}}  <br><br>
+        <b>Current time value:</b>{{current_time}}  <br><br>
+        <b>Format Date:</b>{{format_date}} <br><BR>
+        <b>Format Date:</b>{{format_Date1}} <br><Br>
+        <b>Format Date:</b>{{format_Date2}} <br><Br>
+        <b>Format Date:</b>{{format_Date3}} <br><Br>
+        <b>Abbreviated Day Name:</b>{{format_date_1}} <br><Br>
+        <b>Date of the year:</b>{{format_date_2}} <br><Br>
+        <b>Week number of the year: </b>{{format_date_3}} <br><Br>
+        <b>Month as number: </b>{{format_date_4}} <br><Br>
+        <b>Format Date:</b> {{my_date}}<br><br>
+        <b>Format Date(Different style): </b>{{my_date|date:"l,jS b Y"}}<br><BR>
+        <b>Enviornment Day: </b>{{my_date|date:"jS M Y"}} <br><Br>
+        <b>Enviornment Day: </b>{{my_date|date:"l,d F y"}} <br><Br>
+        <b>Delivery Date: </b>{{my_date|date:"j-n-Y"}} <br><Br>
+        <b>Delivery Day: </b>{{my_date|date:"D"}} <br><Br>
+        <b>Day of the week: </b>{{my_date|date:"l"}} <br><Br>
+        <b>Day of the week(digits): </b>{{my_date|date:"w"}} <br><Br>
+        <b>Day of the year: </b>{{my_date|date:"z"}} <br><Br>
+    </p>
+</body>
+</html>

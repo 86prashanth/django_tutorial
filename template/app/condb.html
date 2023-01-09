@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h5>showing database from Mobile details</h5>
+<table>
+    <tr>
+        <th>mid</th>
+        <th>mname</th>
+        <th>mconn</th>
+    </tr>
+    {% for u in user %}
+    <tr>
+       <td>{{u.mid}}</td> 
+       <td> {{u.mname}}</td>
+       <td> {{u.mconn}} </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        table,tr,th,td{
+            border:2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>page information...</h2>
+    <table>
+        <thead>
+            <th>Page_name</th>
+            <th>page_cat</th>
+            <th>User</th>
+        </thead>
+        <tbody>
+            <tr>
+                {% if data %} 
+                {% for page in data %}
+                <td>{{page.page_name}}</td>
+                <td>{{page.page_cat}}</td>
+                <td>{{page.user}}</td>    
+            </tr>
+                {% endfor %} 
+                {% endif %}
+        </tbody>
+    </table>
+</body>
+
+</html>

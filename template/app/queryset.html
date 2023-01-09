@@ -1,0 +1,43 @@
+<style>
+    table,tr,th,td{
+        border:3px solid black;
+    }
+</style>
+
+<h5>student information</h5>
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>roll</th>
+            <th>city</th>
+            <th>marks</th>
+            <th>pass_date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        {% if wallet %}
+        {% for student in wallet  %}
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+       <td> {{student.roll}}</td>
+       <td> {{student.city}}</td>
+       <td> {{student.marks}}</td>
+      <td>  {{student.pass_date}}</td>
+    </tr>
+    {% endfor %}
+        {% endif%}
+        </tbody>
+    </table>
+    <h3>average marks {{average}}</h3>
+    <h3>average {{average.marks__avg}}</h3> <hr>
+    <h3>total {{total}} </h3>
+    <h3>total marks {{total.marks__total}} </h3><hr>
+    <h3>minimum {{minimum}} </h3>
+    <h3>minimum marks {{minimum.marks__min}}</h3> <hr>
+    <h3>maximum {{maximum}}</h3> 
+    <h3>maximum marks{{maximum.marks__max}}</h3><hr>
+    <h3>total count marks {{totalcount}}</h3>
+    <h3>totalcount {{totalcount.marks__count}}</h3>

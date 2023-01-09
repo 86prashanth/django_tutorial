@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Home page</h1>
+    {% for page in page_obj %}
+    <h2>{{page.title}}</h2>
+    <p>{{page.desc|truncatewords:10}}<a href="{% url 'clspagedetail' page.id %}">Read More</a></p>
+    <p>{{page.publish_date}}</p>
+    {% endfor %}
+
+    <div>
+        <span>
+            {% if page_obj.has_previous %}
+            <a href="?page={{page_obj.previous_page_number}}">Previous</a>
+            <!-- <a href="#">Previous</a> -->
+            {% endif %}
+        </span>
+        <span>page {{page_obj.number }} of {{page_obj.paginator.num_pages}}</span>
+                {% if page_obj.has_next %}
+        <a href="?page={{page_obj.next_page_number}}">Next</a>
+        <!-- <a href="#">Next</a>  -->
+        {% endif %}
+        </span>
+        </span>
+    </div>
+    <a href="{% url 'clspage' %}">Home</a>
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table,tr,th,td{
+                border:2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Teacher info</h2>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>empnum</th>
+                <th>city</th>
+                <th>salary</th>
+                <th>Join_date</th>
+            </thead>
+            <tbody>
+                <tr>
+                {% if teacher_data %}        
+                {% for teacher in teacher_data %}
+                    <td>{{teacher.id}}</td>
+                    <td>{{teacher.name}}</td>
+                    <td>{{teacher.empnum}}</td>
+                    <td>{{teacher.city}}</td>
+                    <td>{{teacher.salary}}</td>
+                    <td>{{teacher.join_date}}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+    </body>
+</html>

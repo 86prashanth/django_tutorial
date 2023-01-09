@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table,th,tr,td{
+                border:2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>Person information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Fees</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if person %} 
+            {% for student in person %}
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.fees}}</td>
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table>
+        <hr>
+        <h4>Human information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>date</th>
+                <th>salary</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if human %} 
+            {% for teacher in human %}
+                <td>{{teacher.id}}</td>
+                <td>{{teacher.name}}</td>
+                <td>{{teacher.age}}</td>
+                <td>{{teacher.date}}</td>
+                <td>{{teacher.salary}}</td>
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table>
+        <hr>
+        <h4>Contractor information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>date</th>
+                <th>payment</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if contractor %} 
+            {% for contractor in contractor %}
+                <td>{{contractor.id}}</td>
+                <td>{{contractor.name}}</td>
+                <td>{{contractor.age}}</td>
+                <td>{{contractor.date}}</td>      
+                <td>{{contractor.payment}}</td>      
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table><hr>
+        <h4>Examcenter  information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>CName</th>
+                <th>City</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if examcenter %} 
+            {% for center in examcenter %}
+                <td>{{center.id}}</td>
+                <td>{{center.cname}}</td>   
+                <td>{{center.city}}</td>   
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table><hr>
+        <h4>Inivigilator information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>cname</th>
+                <th>city</th>
+                <th>roll</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if inivigilator %} 
+            {% for future in inivigilator %}
+                <td>{{future.id}}</td>
+                <td>{{future.name}}</td>
+                <td>{{future.cname}}</td>
+                <td>{{future.city}}</td>      
+                <td>{{future.roll}}</td>      
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table><hr>
+        <h4>Begin information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>cname</th>
+                <th>city</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if begin %} 
+            {% for b in begin %}
+                <td>{{b.id}}</td>
+                <td>{{b.cname}}</td>
+                <td>{{b.city}}</td>          
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table><hr>
+        <h4>meraexamcenters information...</h4>
+        <table>
+            <tr>
+                <thead>
+                <th>ID</th>
+                <th>cname</th>
+                <th>city</th>
+                </thead>
+            </tr>
+            <tbody>
+               <tr> 
+            {% if meraexamcenters %} 
+            {% for mera in meraexamcenters %}
+                <td>{{mera.id}}</td>
+                <td>{{mera.cname}}</td>
+                <td>{{mera.city}}</td>         
+               </tr>
+            </tbody>
+            {% endfor %}
+            {% endif %}
+        </table><hr>
+    </body>
+</html>

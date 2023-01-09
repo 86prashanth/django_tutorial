@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <!-- <style>
+        table,
+        th,
+        tr,
+        td {
+            border: 2px solid red;
+        }
+    </style> -->
+</head>
+
+<body>
+    <table>
+        <caption>Custom List_list</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <hr>
+        <tr>
+            {% for student in lists %}
+            <td>{{student.name}}</td>
+            <td>{{student.roll}}</td>
+            <td>{{student.course}}</td>
+        </tr>{% endfor %}
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Course</th>
+            </tr>
+        </thead> 
+        <tr>
+            {% for fresher in freshers %}
+            <td>{{fresher.name}}</td>
+            <td>{{fresher.roll}}</td>
+            <td>{{fresher.course}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>
